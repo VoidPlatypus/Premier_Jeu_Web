@@ -14,3 +14,24 @@ h1 {
     text-shadow: 2px 2px 6px #000;
     letter-spacing: 2px;
 }
+.scene em{
+    color: brown;
+}
+.scene strong{
+    color: rgb(255, 0, 204);
+    animation: clignoter 2s steps(3, start) infinite;
+}
+@keyframes clignoter {
+to {
+    visibility: hidden;
+}
+}
+.scene .description{
+    color: aquamarine;
+}
+.scene .description .strong{
+    color: rgb(255, 0, 204);
+}
+.scene .btn-choix{
+    color: rgb(212, 92, 7);
+}

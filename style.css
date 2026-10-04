@@ -63,19 +63,20 @@ margin: 0 0 16px 0;
     text-shadow: 0 0 8px rgba(122, 255, 201, 0.4);
     font-style: italic;
     opacity: 0.9;
-    animation: clignoter 2s steps(3, start) infinite;
+    animation: clignoter 3s steps(3, start) infinite;
 }
 @keyframes clignoter {
 to {
     visibility: hidden;
 }
 }
-.description{
+.paragraphe .description{
     color: #7affc9;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+
 }
 .bouton{
     text-align: center;
@@ -83,19 +84,32 @@ to {
 }
 .bouton a{
     display: inline-block;
-    padding: 14px 40px;
-    background: linear-gradient(90deg, #ff6fc9, #7affc9);
-    color: #0a0e14;
+    padding: 14px 30px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
     letter-spacing: 1px;
     transition: transform 0.2s, box-shadow 0.2s;
+    color: #0a0e14;
+    text-align: center;
+    min-width: 260px;
 }
 .bouton a:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(100,255,180,0.5);
 }
+.choix1{
+    background: linear-gradient(90deg, #4fd8ff, #7affc9);
+}
+.choix1:hover {
+    box-shadow: 0 0 20px rgba(79, 216, 255, 0.6);
+}
+.choix2 {
+    background: linear-gradient(90deg, #ff6fc9, #d88aff);
+}
+.choix2:hover {
+    box-shadow: 0 0 20px rgba(255, 111, 201, 0.6);
+}
+
 .avatar_tableau {
     grid-column: 3;
     display: flex;

@@ -1,27 +1,46 @@
 body {
     margin: 0;
+    background: #0a0e14;
+    background-image: radial-gradient(circle at top right, #1a2332 0%, #0a0e14 60%);
+    color: #c8f5d8;
+    font-family: 'Courier New', monospace;
     min-height: 100vh;
     background: url("Pages/image/background.png") center / cover fixed no-repeat;
 }
 
-main {
-    position: relative;
-}
-.table tr{
-    color: floralwhite;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 h1 {
-    font-size: 2.5em;
-    color: #c6f0c3;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 6px #000;
+    text-align: center;
+    color: #b6f5c9;
+    text-shadow: 0 0 10px rgba(130, 255, 170, 0.5);
     letter-spacing: 2px;
+    margin-bottom: 40px;
 }
-.scene em{
-    color: brown;
+.scene {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.paragraphe{
+flex: 1 1 500px;
+    background: rgba(10, 15, 25, 0.6);
+    border: 1px solid rgba(100, 255, 180, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    line-height: 1.7;
+}
+#Protocole{
+    color: #ff5577;
+    font-style: italic;
 }
 .scene strong{
-    color: rgb(255, 0, 204);
+    color: #ff4fa3;
+    font-weight: bold;
     animation: clignoter 2s steps(3, start) infinite;
 }
 @keyframes clignoter {
@@ -29,12 +48,61 @@ to {
     visibility: hidden;
 }
 }
-.scene .description{
-    color: aquamarine;
+.bouton{
+    text-align: center;
+    margin-top: 50px;
 }
-.scene .description .strong{
-    color: rgb(255, 0, 204);
+.bouton a{
+    display: inline-block;
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #ff6fc9, #7affc9);
+    color: #0a0e14;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
-.scene .btn-choix{
-    color: rgb(212, 92, 7);
+.bouton a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(100,255,180,0.5);
+}
+.avatar {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#débutant {
+    max-width: 260px;
+    width: 100%;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 15px rgba(100, 255, 180, 0.3));
+}
+
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 20, 30, 0.85);
+  border: 1px solid rgba(100, 255, 180, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.nom{
+    background: rgba(100, 255, 180, 0.1);
+    color: #ff6fc9;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba(100,255,180,0.2);
+}
+.value{
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(100,255,180,0.1);
+    color: #d8ffe8;
+}
+.coeurs {
+    color: #ff4f6e;
+    letter-spacing: 2px;
 }

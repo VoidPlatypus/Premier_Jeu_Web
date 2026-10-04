@@ -12,6 +12,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
+    box-sizing: border-box;
 }
 h1 {
     text-align: center;
@@ -20,19 +21,27 @@ h1 {
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
-.scene {
-    display: flex;
+.principal {
+    display: grid;
+    grid-template-columns: 300px 650px 300px;
     gap: 30px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+.scene {
+    grid-column: 2;
+    min-width: 0;
 }
 .paragraphe{
 flex: 1 1 500px;
     background: rgba(10, 15, 25, 0.6);
-    border: 1px solid rgba(100, 255, 180, 0.2);
-    border-radius: 8px;
-    padding: 25px;
+    border: 1px solid rgba(100, 255, 180, 0.25);
+    border-radius: 10px;
+    padding: 30px;
     line-height: 1.7;
+}
+.paragraphe p{
+    margin: 0 0 16px 0;
+
 }
 #Protocole{
     color: #ff5577;
@@ -50,7 +59,7 @@ to {
 }
 .bouton{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .bouton a{
     display: inline-block;
@@ -67,12 +76,12 @@ to {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(100,255,180,0.5);
 }
-.avatar {
-    flex: 0 0 320px;
+.avatar_tableau {
+    grid-column: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    min-width: 0;
 }
 #débutant {
     max-width: 260px;
@@ -82,12 +91,12 @@ to {
 }
 
 .tableau {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgba(15, 20, 30, 0.85);
-  border: 1px solid rgba(100, 255, 180, 0.3);
-  border-radius: 6px;
-  overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 20, 30, 0.85);
+    border: 1px solid rgba(100, 255, 180, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
 }
 .nom{
     background: rgba(100, 255, 180, 0.1);
@@ -96,13 +105,20 @@ to {
     padding: 8px 12px;
     font-size: 0.9em;
     border-bottom: 1px solid rgba(100,255,180,0.2);
+    text-align: center;
 }
 .value{
     padding: 8px 12px;
     border-bottom: 1px solid rgba(100,255,180,0.1);
     color: #d8ffe8;
+    text-align: center;
 }
 .coeurs {
     color: #ff4f6e;
     letter-spacing: 2px;
+}
+@media (max-width: 1300px) {
+    .principal { grid-template-columns: 1fr; }
+    .scene { grid-column: 1; }
+    .avatar_tableau { grid-column: 1; order: -1; }
 }

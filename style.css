@@ -59,10 +59,15 @@ margin: 0 0 16px 0;
     text-shadow: 0 0 6px rgba(255, 85, 119, 0.4);
 }
 .scene strong{
-    color: #7affc9;
-    text-shadow: 0 0 8px rgba(122, 255, 201, 0.4);
-    font-style: italic;
-    opacity: 0.9;
+    display: block;
+    background: rgba(255, 79, 163, 0.08);
+    border-left: 3px solid #ff4fa3;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+    color: #ff6fc9;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 79, 163, 0.3);
     animation: clignoter 3s steps(3, start) infinite;
 }
 @keyframes clignoter {

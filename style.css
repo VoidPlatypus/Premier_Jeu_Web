@@ -122,13 +122,48 @@ to {
     align-items: center;
     min-width: 0;
 }
+
 #débutant {
     max-width: 260px;
     width: 100%;
     image-rendering: pixelated;
     filter: drop-shadow(0 0 15px rgba(100, 255, 180, 0.3));
 }
+/* ============================================================
+   ANIMATIONS DU PERSONNAGE (#débutant)
+   Aucune modification du design existant.
+   ============================================================ */
 
+/* 1. Respiration douce de tout le personnage
+   Décalage en pixels entiers pour garder le pixel art net.
+   transform-origin en bas : le personnage "gonfle" depuis son assise. */
+@keyframes respiration {
+    0%, 100% { transform: translateY(0) scaleY(1); }
+    50%      { transform: translateY(-2px) scaleY(1.01); }
+}
+
+/* Lueur d'écran discrète : on anime seulement l'intensité du drop-shadow
+   déjà présent (même couleur, mêmes valeurs de base). */
+@keyframes lueur-ecran {
+    0%, 100% { filter: drop-shadow(0 0 15px rgba(100, 255, 180, 0.3)); }
+    50%      { filter: drop-shadow(0 0 18px rgba(100, 255, 180, 0.4)); }
+}
+
+#débutant {
+    transform-origin: 50% 100%;
+    backface-visibility: hidden;
+    will-change: transform;
+    animation:
+        respiration 4s ease-in-out infinite,
+        lueur-ecran 6s ease-in-out 1s infinite; /* décalée de 1s */
+}
+
+/* Accessibilité : désactive les animations si demandé */
+@media (prefers-reduced-motion: reduce) {
+    #débutant {
+        animation: none;
+    }
+}
 .tableau {
     width: 100%;
     border-collapse: collapse;

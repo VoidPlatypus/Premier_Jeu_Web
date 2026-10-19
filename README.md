@@ -1,4 +1,5 @@
 # Protocole Awakening
+lien: https://voidplatypus.github.io/Premier_Jeu_Web/
 
 > *« Analyste Rang Stagiaire — Gravissez les couches du réseau. Devenez l'Élite, ou soyez effacé. »*
 
@@ -32,23 +33,12 @@ protocole-awakening/
 
 ---
 
-## 🚀 Installation et lancement
+## lancement
 
-Aucune dépendance, aucun build : c'est du HTML/CSS pur.
-
-1. **Cloner le dépôt**
-   ```bash
-   git clone https://github.com/[ton-pseudo]/protocole-awakening.git
-   cd protocole-awakening
-
-Ouvrir le projet
-Double-clique sur index.html, ou
-Utilise l'extension Live Server de VS Code pour un rechargement automatique.
+Cliquer sur le lien en haut du Readme 
 
 
-
-
-🎮 Comment jouer
+## Comment jouer
 
 Lis l'introduction sur la page d'accueil.
 Clique sur « Accepter le protocole » pour commencer ta formation.
@@ -83,13 +73,13 @@ Capacités débloquées au fil de l'aventure
 
 
 
-🛠️ Technologies utilisées
+## Technologies utilisées
 
 HTML5
 CSS3 (Grid, Flexbox, animations @keyframes, media queries)
 
 
-🎨 Palette de couleurs
+Palette de couleurs
 Copier le tableau
 
 
@@ -125,7 +115,7 @@ Fond
 
 
 
-🗺️ Roadmap
+## Roadmap
 
  Page d'introduction
  Fiche de personnage
